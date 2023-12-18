@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новинки компьютерной техники и новейшие разработки.</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+            <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+            <img src="./img/photo_2023-12-18_17-02-39.jpg" alt="" style="width: 60px; margin-left:260px  ;">
+        </div>
+    </header>
+    <div id="top">
+        <h1>Новинки</h1>
+        <h3> компьютерной техники и новейшие разработки</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <img src="./img/AR VR in Aviation.jpg" alt="" style="width:300px;"> 
+
+        </div>
+        <div class="text">
+            <span> Быстро развивающиеся технологии в различных сферах как инженерия, искувственный интелект, видео игрыи медицина </span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Новые</h2>
+        <h4>технологии</h4>
+
+        <div class="img">
+            <img src="./img/de-res-phanteks-rgv-pha-pk515e.jpg" alt="">
+            <span>Компьютер в переводе с английского языка (computer) переводится, как «вычислитель». </span>
+        </div>
+        <div class="img">
+            <img src="./img/фото7jpg.jpg" alt="">
+            <span>Мы живем в эпоху быстрого технологического развития, и каждый год появляются новые изобретения и инновации, которые никогда раньше не были возможны.</span>
+        </div>
+        <div class="img">
+            <img src="./img/фото6.jpg" alt="">
+            <span>это не инструмент или программа, а отдельное направление компьютерных наук. Специалисты по ИИ разрабатывают системы, которые анализируют информацию и решают задачи аналогично тому, как это делает человек.</span>
+        </div>
+        <div class="img">
+            <img src="./img/1-9.jpg" alt="">
+            <span>Медицинская 3D-печать и биотехнологическая промышленность заново проектируют весь мир фармацевтики и донорских органов. 2016 был годом успешной 3D-печати печени, артерии и кости.</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center><h5>Обратная связь</h5></center>
+        <form id="form_input">
+            <label for="name">Имя<span>*</span></label><br>
+            <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+            <label for="email">Ваша почта<span>*</span></label><br>
+            <input type="email" placeholder="Введите email" name="email" id="email"><br>
+            <div id="mess_send" class="btn">Отправить</div>
+
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function() {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed")
+        });
+    </script>
+</body>
+</html>
